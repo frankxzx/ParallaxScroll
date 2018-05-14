@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		012566E420A958330050C351 /* UIView+parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566E320A958330050C351 /* UIView+parallax.m */; };
+		012566E720A960100050C351 /* PageCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566E620A960100050C351 /* PageCollectionViewFlowLayout.m */; };
+		01E1A26A20A92A69007C266A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A26920A92A69007C266A /* AppDelegate.m */; };
+		01E1A26D20A92A69007C266A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A26C20A92A69007C266A /* ViewController.m */; };
+		01E1A27020A92A69007C266A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E1A26E20A92A69007C266A /* Main.storyboard */; };
+		01E1A27220A92A6B007C266A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01E1A27120A92A6B007C266A /* Assets.xcassets */; };
+		01E1A27520A92A6B007C266A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E1A27320A92A6B007C266A /* LaunchScreen.storyboard */; };
+		01E1A27820A92A6B007C266A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A27720A92A6B007C266A /* main.m */; };
+		01E1A28120A92B61007C266A /* PSAnimationMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28020A92B61007C266A /* PSAnimationMaker.m */; };
+		01E1A28420A92B9C007C266A /* PSAnimationViewMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28320A92B9C007C266A /* PSAnimationViewMaker.m */; };
+		01E1A28720A92BC1007C266A /* PSAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28620A92BC1007C266A /* PSAnimator.m */; };
+		01E1A28C20A92C54007C266A /* PSAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28B20A92C54007C266A /* PSAnimationView.m */; };
+		01E1A28F20A92DBD007C266A /* PSAnimationProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28E20A92DBD007C266A /* PSAnimationProperty.m */; };
+		01E1A29220A92F4E007C266A /* PSAnimationPropertyMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A29120A92F4E007C266A /* PSAnimationPropertyMaker.m */; };
+		01E1A29920A936A9007C266A /* UIScrollView+parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A29820A936A9007C266A /* UIScrollView+parallax.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		012566E220A958330050C351 /* UIView+parallax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+parallax.h"; sourceTree = "<group>"; };
+		012566E320A958330050C351 /* UIView+parallax.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+parallax.m"; sourceTree = "<group>"; };
+		012566E520A960100050C351 /* PageCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		012566E620A960100050C351 /* PageCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		01E1A26520A92A69007C266A /* ParallaxScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01E1A26820A92A69007C266A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		01E1A26920A92A69007C266A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		01E1A26B20A92A69007C266A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		01E1A26C20A92A69007C266A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		01E1A26F20A92A69007C266A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01E1A27120A92A6B007C266A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01E1A27420A92A6B007C266A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01E1A27620A92A6B007C266A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E1A27720A92A6B007C266A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01E1A27F20A92B61007C266A /* PSAnimationMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationMaker.h; sourceTree = "<group>"; };
+		01E1A28020A92B61007C266A /* PSAnimationMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationMaker.m; sourceTree = "<group>"; };
+		01E1A28220A92B9C007C266A /* PSAnimationViewMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationViewMaker.h; sourceTree = "<group>"; };
+		01E1A28320A92B9C007C266A /* PSAnimationViewMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationViewMaker.m; sourceTree = "<group>"; };
+		01E1A28520A92BC1007C266A /* PSAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimator.h; sourceTree = "<group>"; };
+		01E1A28620A92BC1007C266A /* PSAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimator.m; sourceTree = "<group>"; };
+		01E1A28A20A92C54007C266A /* PSAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationView.h; sourceTree = "<group>"; };
+		01E1A28B20A92C54007C266A /* PSAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationView.m; sourceTree = "<group>"; };
+		01E1A28D20A92DBD007C266A /* PSAnimationProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationProperty.h; sourceTree = "<group>"; };
+		01E1A28E20A92DBD007C266A /* PSAnimationProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationProperty.m; sourceTree = "<group>"; };
+		01E1A29020A92F4E007C266A /* PSAnimationPropertyMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationPropertyMaker.h; sourceTree = "<group>"; };
+		01E1A29120A92F4E007C266A /* PSAnimationPropertyMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationPropertyMaker.m; sourceTree = "<group>"; };
+		01E1A29720A936A9007C266A /* UIScrollView+parallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+parallax.h"; sourceTree = "<group>"; };
+		01E1A29820A936A9007C266A /* UIScrollView+parallax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+parallax.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01E1A26220A92A69007C266A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01E1A25C20A92A69007C266A = {
+			isa = PBXGroup;
+			children = (
+				01E1A27E20A92ABE007C266A /* Source */,
+				01E1A26720A92A69007C266A /* Demo */,
+				01E1A26620A92A69007C266A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01E1A26620A92A69007C266A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01E1A26520A92A69007C266A /* ParallaxScroll.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01E1A26720A92A69007C266A /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				01E1A26820A92A69007C266A /* AppDelegate.h */,
+				01E1A26920A92A69007C266A /* AppDelegate.m */,
+				01E1A26B20A92A69007C266A /* ViewController.h */,
+				01E1A26C20A92A69007C266A /* ViewController.m */,
+				01E1A26E20A92A69007C266A /* Main.storyboard */,
+				01E1A27120A92A6B007C266A /* Assets.xcassets */,
+				01E1A27320A92A6B007C266A /* LaunchScreen.storyboard */,
+				01E1A27620A92A6B007C266A /* Info.plist */,
+				01E1A27720A92A6B007C266A /* main.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		01E1A27E20A92ABE007C266A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				01E1A29620A936A9007C266A /* Extension */,
+				01E1A28820A92BCF007C266A /* Maker */,
+				01E1A28920A92C11007C266A /* Parallax */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		01E1A28820A92BCF007C266A /* Maker */ = {
+			isa = PBXGroup;
+			children = (
+				01E1A27F20A92B61007C266A /* PSAnimationMaker.h */,
+				01E1A28020A92B61007C266A /* PSAnimationMaker.m */,
+				01E1A28220A92B9C007C266A /* PSAnimationViewMaker.h */,
+				01E1A28320A92B9C007C266A /* PSAnimationViewMaker.m */,
+				01E1A29020A92F4E007C266A /* PSAnimationPropertyMaker.h */,
+				01E1A29120A92F4E007C266A /* PSAnimationPropertyMaker.m */,
+			);
+			path = Maker;
+			sourceTree = "<group>";
+		};
+		01E1A28920A92C11007C266A /* Parallax */ = {
+			isa = PBXGroup;
+			children = (
+				01E1A28520A92BC1007C266A /* PSAnimator.h */,
+				01E1A28620A92BC1007C266A /* PSAnimator.m */,
+				01E1A28A20A92C54007C266A /* PSAnimationView.h */,
+				01E1A28B20A92C54007C266A /* PSAnimationView.m */,
+				01E1A28D20A92DBD007C266A /* PSAnimationProperty.h */,
+				01E1A28E20A92DBD007C266A /* PSAnimationProperty.m */,
+				012566E520A960100050C351 /* PageCollectionViewFlowLayout.h */,
+				012566E620A960100050C351 /* PageCollectionViewFlowLayout.m */,
+			);
+			path = Parallax;
+			sourceTree = "<group>";
+		};
+		01E1A29620A936A9007C266A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				01E1A29720A936A9007C266A /* UIScrollView+parallax.h */,
+				01E1A29820A936A9007C266A /* UIScrollView+parallax.m */,
+				012566E220A958330050C351 /* UIView+parallax.h */,
+				012566E320A958330050C351 /* UIView+parallax.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01E1A26420A92A69007C266A /* ParallaxScroll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01E1A27B20A92A6B007C266A /* Build configuration list for PBXNativeTarget "ParallaxScroll" */;
+			buildPhases = (
+				01E1A26120A92A69007C266A /* Sources */,
+				01E1A26220A92A69007C266A /* Frameworks */,
+				01E1A26320A92A69007C266A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParallaxScroll;
+			productName = ParallaxScroll;
+			productReference = 01E1A26520A92A69007C266A /* ParallaxScroll.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01E1A25D20A92A69007C266A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = frankxzx;
+				TargetAttributes = {
+					01E1A26420A92A69007C266A = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 01E1A26020A92A69007C266A /* Build configuration list for PBXProject "ParallaxScroll" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01E1A25C20A92A69007C266A;
+			productRefGroup = 01E1A26620A92A69007C266A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01E1A26420A92A69007C266A /* ParallaxScroll */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01E1A26320A92A69007C266A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01E1A27520A92A6B007C266A /* LaunchScreen.storyboard in Resources */,
+				01E1A27220A92A6B007C266A /* Assets.xcassets in Resources */,
+				01E1A27020A92A69007C266A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01E1A26120A92A69007C266A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01E1A28F20A92DBD007C266A /* PSAnimationProperty.m in Sources */,
+				01E1A28420A92B9C007C266A /* PSAnimationViewMaker.m in Sources */,
+				01E1A28120A92B61007C266A /* PSAnimationMaker.m in Sources */,
+				01E1A26D20A92A69007C266A /* ViewController.m in Sources */,
+				01E1A28720A92BC1007C266A /* PSAnimator.m in Sources */,
+				01E1A28C20A92C54007C266A /* PSAnimationView.m in Sources */,
+				01E1A29920A936A9007C266A /* UIScrollView+parallax.m in Sources */,
+				01E1A27820A92A6B007C266A /* main.m in Sources */,
+				012566E420A958330050C351 /* UIView+parallax.m in Sources */,
+				01E1A26A20A92A69007C266A /* AppDelegate.m in Sources */,
+				01E1A29220A92F4E007C266A /* PSAnimationPropertyMaker.m in Sources */,
+				012566E720A960100050C351 /* PageCollectionViewFlowLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		01E1A26E20A92A69007C266A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01E1A26F20A92A69007C266A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01E1A27320A92A6B007C266A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01E1A27420A92A6B007C266A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01E1A27920A92A6B007C266A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		01E1A27A20A92A6B007C266A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01E1A27C20A92A6B007C266A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJ6D8L57PH;
+				INFOPLIST_FILE = ParallaxScroll/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchspring.ParallaxScroll;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01E1A27D20A92A6B007C266A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJ6D8L57PH;
+				INFOPLIST_FILE = ParallaxScroll/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchspring.ParallaxScroll;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01E1A26020A92A69007C266A /* Build configuration list for PBXProject "ParallaxScroll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01E1A27920A92A6B007C266A /* Debug */,
+				01E1A27A20A92A6B007C266A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01E1A27B20A92A6B007C266A /* Build configuration list for PBXNativeTarget "ParallaxScroll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01E1A27C20A92A6B007C266A /* Debug */,
+				01E1A27D20A92A6B007C266A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01E1A25D20A92A69007C266A /* Project object */;
+}
