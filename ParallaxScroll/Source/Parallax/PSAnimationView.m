@@ -10,4 +10,8 @@
 
 @implementation PSAnimationView
 
+-(void)applyAnimationWithProgress:(PSScrollProgessValue)value {
+    
+}
+
 @end

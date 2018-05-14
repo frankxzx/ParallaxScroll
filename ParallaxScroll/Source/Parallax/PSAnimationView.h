@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PSAnimator.h"
 
 @interface PSAnimationView : NSObject
 
 @property(nonatomic, weak) UIView *view;
 
+-(void)applyAnimationWithProgress:(PSScrollProgessValue)value;
 
 @end

@@ -7,7 +7,11 @@
 //
 
 #import "UIScrollView+parallax.h"
+#import "UIView+parallax.h"
+#import "PSAnimator.h"
 #import <objc/runtime.h>
+
+static CGFloat const kCenterThreshHold = 0.0005;
 
 static inline void ps_swizzleSelector(Class _class, SEL _originSelector, SEL _newSelector) {
     Method oriMethod = class_getInstanceMethod(_class, _originSelector);
@@ -18,6 +22,14 @@ static inline void ps_swizzleSelector(Class _class, SEL _originSelector, SEL _ne
     } else {
         method_exchangeImplementations(oriMethod, newMethod);
     }
+}
+
+NS_INLINE CGFloat relativeProgressTransform(CGFloat progressValue, CGFloat relativeValue) {
+    CGFloat relativePercent = (progressValue - (relativeValue / 2.0)) / relativeValue;
+    if (relativePercent == 0.0) { return  0.0; }
+    if (relativePercent <= -1.0) { return -1.0; }
+    if (relativePercent >=  1.0) { return  1.0; }
+    return relativePercent;
 }
 
 @implementation UIScrollView (parallax)
@@ -52,13 +64,58 @@ static inline void ps_swizzleSelector(Class _class, SEL _originSelector, SEL _ne
     if ([self isKindOfClass:[UICollectionView class]]) {
         needUpdateViews = ((UICollectionView *)self).visibleCells;
     }
-    if ([self isKindOfClass:[UITableView class]]) {
+    else if ([self isKindOfClass:[UITableView class]]) {
         needUpdateViews = ((UITableView *)self).visibleCells;
+    }
+    else {
+        needUpdateViews = self.subviews;
     }
     //执行动画
     [needUpdateViews enumerateObjectsUsingBlock:^(UIView * _Nonnull view, NSUInteger idx, BOOL * _Nonnull stop) {
-        
+        if ([view respondsToSelector:@selector(configureAnimator)]) {
+            PSAnimator *animator = view.cachedProgressAnimator;
+            if (!animator) {
+                animator = [(id<PSAnimatableType>)view configureAnimator];
+            }
+            
+            //转化到 父容器坐标系
+            CGPoint center = [self convertPoint:view.center toView:self];
+            switch (animator.direction) {
+                case PSScrollDirectionVertical:
+                    [animator applyAnimationWithProgress:[self verticalProgressAtCenter:center toViewPortHeight:self.bounds.size.height]];
+                    break;
+                case PSScrollDirectionHorizontal:
+                    [animator applyAnimationWithProgress:[self horizontalProgressAtCenter:center toViewPortWidth:self.bounds.size.width]];
+                    break;
+            }
+        }
     }];
+}
+
+-(PSScrollProgessValue)verticalProgressAtCenter:(CGPoint)center toViewPortHeight:(CGFloat)height {
+    CGFloat relativePercent = relativeProgressTransform(center.y, height);
+    if (relativePercent < -kCenterThreshHold)
+    {
+        return PSScrollProgessMake(PSScrollProgressStateAbove, 1.0 + relativePercent);
+    }
+    else if (relativePercent > kCenterThreshHold)
+    {
+        return PSScrollProgessMake(PSScrollProgressStateBelow, 1.0 - relativePercent);
+    }
+    return PSScrollProgessMake(PSScrollProgressStateCenter, 0);
+}
+
+-(PSScrollProgessValue)horizontalProgressAtCenter:(CGPoint)center toViewPortWidth:(CGFloat)Width {
+    CGFloat relativePercent = relativeProgressTransform(center.x, Width);
+    if (relativePercent < -kCenterThreshHold)
+    {
+        return PSScrollProgessMake(PSScrollProgressStateLeft, 1.0 + relativePercent);
+    }
+    else if (relativePercent > kCenterThreshHold)
+    {
+        return PSScrollProgessMake(PSScrollProgressStateRight, 1.0 - relativePercent);
+    }
+    return PSScrollProgessMake(PSScrollProgressStateCenter, 0);
 }
 
 @end
