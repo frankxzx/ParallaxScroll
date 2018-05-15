@@ -10,4 +10,16 @@
 
 @implementation PSAnimationProperty
 
+-(void)adjustProgressForView:(UIView *)view
+                     toValue:(PSAnimationValue *)toValue
+                    progress:(CGFloat)progress {
+    if (!_animationPropertyKey || !toValue) { return; }
+ 
+    PSAnimationValue *formValue = self.propertyValue;
+    PSAnimationValue *diffValue = [formValue progressToValue:toValue atProgress:progress];
+    if (diffValue) {
+        
+    }
+}
+
 @end

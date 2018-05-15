@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		012566E420A958330050C351 /* UIView+parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566E320A958330050C351 /* UIView+parallax.m */; };
 		012566E720A960100050C351 /* PageCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566E620A960100050C351 /* PageCollectionViewFlowLayout.m */; };
+		012566EA20AAAAF20050C351 /* PSAnimationState.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566E920AAAAF20050C351 /* PSAnimationState.m */; };
+		012566ED20AAADA90050C351 /* PSAnimationValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566EC20AAADA90050C351 /* PSAnimationValue.m */; };
 		01E1A26A20A92A69007C266A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A26920A92A69007C266A /* AppDelegate.m */; };
 		01E1A26D20A92A69007C266A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A26C20A92A69007C266A /* ViewController.m */; };
 		01E1A27020A92A69007C266A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E1A26E20A92A69007C266A /* Main.storyboard */; };
@@ -29,6 +31,10 @@
 		012566E320A958330050C351 /* UIView+parallax.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+parallax.m"; sourceTree = "<group>"; };
 		012566E520A960100050C351 /* PageCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		012566E620A960100050C351 /* PageCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		012566E820AAAAF20050C351 /* PSAnimationState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationState.h; sourceTree = "<group>"; };
+		012566E920AAAAF20050C351 /* PSAnimationState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationState.m; sourceTree = "<group>"; };
+		012566EB20AAADA90050C351 /* PSAnimationValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationValue.h; sourceTree = "<group>"; };
+		012566EC20AAADA90050C351 /* PSAnimationValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationValue.m; sourceTree = "<group>"; };
 		01E1A26520A92A69007C266A /* ParallaxScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E1A26820A92A69007C266A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01E1A26920A92A69007C266A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,8 +135,12 @@
 				01E1A28620A92BC1007C266A /* PSAnimator.m */,
 				01E1A28A20A92C54007C266A /* PSAnimationView.h */,
 				01E1A28B20A92C54007C266A /* PSAnimationView.m */,
+				012566E820AAAAF20050C351 /* PSAnimationState.h */,
+				012566E920AAAAF20050C351 /* PSAnimationState.m */,
 				01E1A28D20A92DBD007C266A /* PSAnimationProperty.h */,
 				01E1A28E20A92DBD007C266A /* PSAnimationProperty.m */,
+				012566EB20AAADA90050C351 /* PSAnimationValue.h */,
+				012566EC20AAADA90050C351 /* PSAnimationValue.m */,
 				012566E520A960100050C351 /* PageCollectionViewFlowLayout.h */,
 				012566E620A960100050C351 /* PageCollectionViewFlowLayout.m */,
 			);
@@ -225,6 +235,8 @@
 				01E1A28720A92BC1007C266A /* PSAnimator.m in Sources */,
 				01E1A28C20A92C54007C266A /* PSAnimationView.m in Sources */,
 				01E1A29920A936A9007C266A /* UIScrollView+parallax.m in Sources */,
+				012566ED20AAADA90050C351 /* PSAnimationValue.m in Sources */,
+				012566EA20AAAAF20050C351 /* PSAnimationState.m in Sources */,
 				01E1A27820A92A6B007C266A /* main.m in Sources */,
 				012566E420A958330050C351 /* UIView+parallax.m in Sources */,
 				01E1A26A20A92A69007C266A /* AppDelegate.m in Sources */,
@@ -371,7 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJ6D8L57PH;
-				INFOPLIST_FILE = ParallaxScroll/Info.plist;
+				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,7 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJ6D8L57PH;
-				INFOPLIST_FILE = ParallaxScroll/Info.plist;
+				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

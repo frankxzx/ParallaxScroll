@@ -9,6 +9,10 @@
 #import "PSAnimator.h"
 #import "PSAnimationView.h"
 
+@interface PSAnimator()
+
+@end
+
 @implementation PSAnimator
 
 +(instancetype)animateWithDirection:(PSScrollDirection)direction {
@@ -23,9 +27,14 @@
 }
 
 -(void)applyAnimationWithProgress:(PSScrollProgessValue)value {
-    [self.animationViews enumerateObjectsUsingBlock:^(PSAnimationView * _Nonnull animationView, NSUInteger idx, BOOL * _Nonnull stop) {
-        [animationView applyAnimationWithProgress:value];
-    }];
+    //执行最小单位的动画组
+//    [self.animationViews enumerateObjectsUsingBlock:^(PSAnimationView * _Nonnull animationView, NSUInteger idx, BOOL * _Nonnull stop) {
+//        [animationView applyAnimationWithProgress:value];
+//    }];
+}
+
+-(void)startFormView:(UIView *)view {
+    
 }
 
 @end
