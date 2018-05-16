@@ -24,7 +24,9 @@
 @property (readonly) CGAffineTransform cgAffineTransformValue;
 @property (readonly) CATransform3D caTransform3DValue;
 @property (readonly) UIColor *colorValue;
-- (CGRect) cgRectValue;
+@property (readonly) CGRect cgRectValue;
+
+@property (readonly) id boxValue;
 
 -(PSAnimationValue *)progressToValue:(PSAnimationValue *)value atProgress:(CGFloat)progress;
 

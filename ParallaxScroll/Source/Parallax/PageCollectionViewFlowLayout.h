@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+//翻页效果的 FlowLayout
 @interface PageCollectionViewFlowLayout : UICollectionViewFlowLayout
 
 @end

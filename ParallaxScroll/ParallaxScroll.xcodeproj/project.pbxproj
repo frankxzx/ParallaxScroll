@@ -9,20 +9,16 @@
 /* Begin PBXBuildFile section */
 		012566E420A958330050C351 /* UIView+parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566E320A958330050C351 /* UIView+parallax.m */; };
 		012566E720A960100050C351 /* PageCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566E620A960100050C351 /* PageCollectionViewFlowLayout.m */; };
-		012566EA20AAAAF20050C351 /* PSAnimationState.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566E920AAAAF20050C351 /* PSAnimationState.m */; };
 		012566ED20AAADA90050C351 /* PSAnimationValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566EC20AAADA90050C351 /* PSAnimationValue.m */; };
+		012566F020AC117B0050C351 /* PSAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566EF20AC117B0050C351 /* PSAnimationView.m */; };
 		01E1A26A20A92A69007C266A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A26920A92A69007C266A /* AppDelegate.m */; };
 		01E1A26D20A92A69007C266A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A26C20A92A69007C266A /* ViewController.m */; };
 		01E1A27020A92A69007C266A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E1A26E20A92A69007C266A /* Main.storyboard */; };
 		01E1A27220A92A6B007C266A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01E1A27120A92A6B007C266A /* Assets.xcassets */; };
 		01E1A27520A92A6B007C266A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E1A27320A92A6B007C266A /* LaunchScreen.storyboard */; };
 		01E1A27820A92A6B007C266A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A27720A92A6B007C266A /* main.m */; };
-		01E1A28120A92B61007C266A /* PSAnimationMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28020A92B61007C266A /* PSAnimationMaker.m */; };
-		01E1A28420A92B9C007C266A /* PSAnimationViewMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28320A92B9C007C266A /* PSAnimationViewMaker.m */; };
 		01E1A28720A92BC1007C266A /* PSAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28620A92BC1007C266A /* PSAnimator.m */; };
-		01E1A28C20A92C54007C266A /* PSAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28B20A92C54007C266A /* PSAnimationView.m */; };
 		01E1A28F20A92DBD007C266A /* PSAnimationProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A28E20A92DBD007C266A /* PSAnimationProperty.m */; };
-		01E1A29220A92F4E007C266A /* PSAnimationPropertyMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A29120A92F4E007C266A /* PSAnimationPropertyMaker.m */; };
 		01E1A29920A936A9007C266A /* UIScrollView+parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A29820A936A9007C266A /* UIScrollView+parallax.m */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +27,10 @@
 		012566E320A958330050C351 /* UIView+parallax.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+parallax.m"; sourceTree = "<group>"; };
 		012566E520A960100050C351 /* PageCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		012566E620A960100050C351 /* PageCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageCollectionViewFlowLayout.m; sourceTree = "<group>"; };
-		012566E820AAAAF20050C351 /* PSAnimationState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationState.h; sourceTree = "<group>"; };
-		012566E920AAAAF20050C351 /* PSAnimationState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationState.m; sourceTree = "<group>"; };
 		012566EB20AAADA90050C351 /* PSAnimationValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationValue.h; sourceTree = "<group>"; };
 		012566EC20AAADA90050C351 /* PSAnimationValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationValue.m; sourceTree = "<group>"; };
+		012566EE20AC117B0050C351 /* PSAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationView.h; sourceTree = "<group>"; };
+		012566EF20AC117B0050C351 /* PSAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationView.m; sourceTree = "<group>"; };
 		01E1A26520A92A69007C266A /* ParallaxScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E1A26820A92A69007C266A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01E1A26920A92A69007C266A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,18 +41,10 @@
 		01E1A27420A92A6B007C266A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01E1A27620A92A6B007C266A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01E1A27720A92A6B007C266A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		01E1A27F20A92B61007C266A /* PSAnimationMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationMaker.h; sourceTree = "<group>"; };
-		01E1A28020A92B61007C266A /* PSAnimationMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationMaker.m; sourceTree = "<group>"; };
-		01E1A28220A92B9C007C266A /* PSAnimationViewMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationViewMaker.h; sourceTree = "<group>"; };
-		01E1A28320A92B9C007C266A /* PSAnimationViewMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationViewMaker.m; sourceTree = "<group>"; };
 		01E1A28520A92BC1007C266A /* PSAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimator.h; sourceTree = "<group>"; };
 		01E1A28620A92BC1007C266A /* PSAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimator.m; sourceTree = "<group>"; };
-		01E1A28A20A92C54007C266A /* PSAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationView.h; sourceTree = "<group>"; };
-		01E1A28B20A92C54007C266A /* PSAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationView.m; sourceTree = "<group>"; };
 		01E1A28D20A92DBD007C266A /* PSAnimationProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationProperty.h; sourceTree = "<group>"; };
 		01E1A28E20A92DBD007C266A /* PSAnimationProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationProperty.m; sourceTree = "<group>"; };
-		01E1A29020A92F4E007C266A /* PSAnimationPropertyMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationPropertyMaker.h; sourceTree = "<group>"; };
-		01E1A29120A92F4E007C266A /* PSAnimationPropertyMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationPropertyMaker.m; sourceTree = "<group>"; };
 		01E1A29720A936A9007C266A /* UIScrollView+parallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+parallax.h"; sourceTree = "<group>"; };
 		01E1A29820A936A9007C266A /* UIScrollView+parallax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+parallax.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,23 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				01E1A29620A936A9007C266A /* Extension */,
-				01E1A28820A92BCF007C266A /* Maker */,
 				01E1A28920A92C11007C266A /* Parallax */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		01E1A28820A92BCF007C266A /* Maker */ = {
-			isa = PBXGroup;
-			children = (
-				01E1A27F20A92B61007C266A /* PSAnimationMaker.h */,
-				01E1A28020A92B61007C266A /* PSAnimationMaker.m */,
-				01E1A28220A92B9C007C266A /* PSAnimationViewMaker.h */,
-				01E1A28320A92B9C007C266A /* PSAnimationViewMaker.m */,
-				01E1A29020A92F4E007C266A /* PSAnimationPropertyMaker.h */,
-				01E1A29120A92F4E007C266A /* PSAnimationPropertyMaker.m */,
-			);
-			path = Maker;
 			sourceTree = "<group>";
 		};
 		01E1A28920A92C11007C266A /* Parallax */ = {
@@ -133,10 +107,8 @@
 			children = (
 				01E1A28520A92BC1007C266A /* PSAnimator.h */,
 				01E1A28620A92BC1007C266A /* PSAnimator.m */,
-				01E1A28A20A92C54007C266A /* PSAnimationView.h */,
-				01E1A28B20A92C54007C266A /* PSAnimationView.m */,
-				012566E820AAAAF20050C351 /* PSAnimationState.h */,
-				012566E920AAAAF20050C351 /* PSAnimationState.m */,
+				012566EE20AC117B0050C351 /* PSAnimationView.h */,
+				012566EF20AC117B0050C351 /* PSAnimationView.m */,
 				01E1A28D20A92DBD007C266A /* PSAnimationProperty.h */,
 				01E1A28E20A92DBD007C266A /* PSAnimationProperty.m */,
 				012566EB20AAADA90050C351 /* PSAnimationValue.h */,
@@ -228,19 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012566F020AC117B0050C351 /* PSAnimationView.m in Sources */,
 				01E1A28F20A92DBD007C266A /* PSAnimationProperty.m in Sources */,
-				01E1A28420A92B9C007C266A /* PSAnimationViewMaker.m in Sources */,
-				01E1A28120A92B61007C266A /* PSAnimationMaker.m in Sources */,
 				01E1A26D20A92A69007C266A /* ViewController.m in Sources */,
 				01E1A28720A92BC1007C266A /* PSAnimator.m in Sources */,
-				01E1A28C20A92C54007C266A /* PSAnimationView.m in Sources */,
 				01E1A29920A936A9007C266A /* UIScrollView+parallax.m in Sources */,
 				012566ED20AAADA90050C351 /* PSAnimationValue.m in Sources */,
-				012566EA20AAAAF20050C351 /* PSAnimationState.m in Sources */,
 				01E1A27820A92A6B007C266A /* main.m in Sources */,
 				012566E420A958330050C351 /* UIView+parallax.m in Sources */,
 				01E1A26A20A92A69007C266A /* AppDelegate.m in Sources */,
-				01E1A29220A92F4E007C266A /* PSAnimationPropertyMaker.m in Sources */,
 				012566E720A960100050C351 /* PageCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

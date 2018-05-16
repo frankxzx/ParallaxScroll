@@ -28,13 +28,9 @@
 
 -(void)applyAnimationWithProgress:(PSScrollProgessValue)value {
     //执行最小单位的动画组
-//    [self.animationViews enumerateObjectsUsingBlock:^(PSAnimationView * _Nonnull animationView, NSUInteger idx, BOOL * _Nonnull stop) {
-//        [animationView applyAnimationWithProgress:value];
-//    }];
-}
-
--(void)startFormView:(UIView *)view {
-    
+    [self.animationViews enumerateObjectsUsingBlock:^(PSAnimationView * _Nonnull animationView, NSUInteger idx, BOOL * _Nonnull stop) {
+        [animationView setProgress:value];
+    }];
 }
 
 @end

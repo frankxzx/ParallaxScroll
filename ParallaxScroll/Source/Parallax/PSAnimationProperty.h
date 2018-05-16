@@ -14,8 +14,4 @@
 @property(nonatomic, copy) NSString *animationPropertyKey;
 @property(nonatomic, strong) PSAnimationValue *propertyValue;
 
--(void)adjustProgressForView:(UIView *)view
-                     toValue:(PSAnimationValue *)value
-                    progress:(CGFloat)progres;
-
 @end

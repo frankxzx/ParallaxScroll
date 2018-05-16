@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class PSAnimationView;
 
 typedef enum PSScrollProgressState: NSUInteger {
@@ -48,9 +49,9 @@ typedef NS_ENUM(NSUInteger, PSScrollDirection) {
 
 @interface PSAnimator : NSObject
 
-typedef PSAnimator *(^PSAnimatorChain)(void);
-
 @property(nonatomic, assign) PSScrollDirection direction;
+
+@property(nonatomic, strong) NSArray <PSAnimationView *>* animationViews;
 
 +(instancetype)animateWithDirection:(PSScrollDirection)direction;
 

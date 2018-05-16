@@ -220,6 +220,11 @@ NS_INLINE CATransform3D CATransform3DProgress(CATransform3D fromValue, CATransfo
 - (CATransform3D) caTransform3DValue { return self.value.CATransform3DValue; }
 - (UIColor *)colorValue { return self.color; }
 - (CGSize) cgSizeValue { return self.value.CGSizeValue; }
+- (id) boxValue {
+    if (self.color) { return self.color; }
+    NSValue *v = self.value;
+    return v;
+}
 
 -(PSAnimationValue *)progressToValue:(PSAnimationValue *)value atProgress:(CGFloat)progress {
     
