@@ -17,6 +17,7 @@
 - (PSAnimationValue *)initWithUIColor:(UIColor *)value;
 - (PSAnimationValue *)initWithCGRect:(CGRect)value;
 - (PSAnimationValue *)initWithCGSize:(CGSize)value;
+- (PSAnimationValue *)initWithValue:(id)value;
 
 @property (readonly) CGFloat cgFloatValue;
 @property (readonly) CGPoint cgPointValue;

@@ -10,6 +10,13 @@
 
 @implementation PSAnimationProperty
 
++ (PSAnimationProperty *)propertyWithKey:(NSString *)key value:(id)value {
+    PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
+    f.animationPropertyKey = key;
+    f.propertyValue = [[PSAnimationValue alloc]initWithValue:value];
+    return f;
+}
+
 + (PSAnimationProperty *)propertyWithColor:(UIColor *)color {
     PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
     f.animationPropertyKey = @"backgroundColor";

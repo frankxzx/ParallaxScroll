@@ -18,8 +18,30 @@
     v.fromAnimationProperty = begin;
     v.toAnimationProperty = end;
     v.view = view;
+  
     return v;
 }
+
+/*
++(PSAnimationView *)animvationViewWithView:(UIView *)view
+                               endProperty:(PSAnimationProperty *)end {
+    PSAnimationView *v = [[PSAnimationView alloc]init];
+    NSString *keyPath = end.animationPropertyKey;
+    id value;
+    if ([keyPath isEqualToString:@"transform3D"]) {
+        value = [view.layer valueForKey:keyPath];
+    } else if ([view respondsToSelector:NSSelectorFromString(keyPath)]) {
+        value = [view valueForKey:keyPath];
+    } else if ([view.layer respondsToSelector:NSSelectorFromString(keyPath)]) {
+        value = [view.layer valueForKey:keyPath];
+    }
+    v.fromAnimationProperty = [PSAnimationProperty propertyWithKey:keyPath value:value];
+    v.toAnimationProperty = end;
+    v.view = view;
+    
+    return v;
+}
+ */
 
 -(void)setProgress:(CGFloat)progress isResume:(BOOL)isResume {
     

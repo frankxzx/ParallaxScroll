@@ -20,6 +20,9 @@
                                         endProperty:(PSAnimationProperty *)end
                                              inView:(UIView *)view;
 
+//+(PSAnimationView *)animvationViewWithView:(UIView *)view
+//                               endProperty:(PSAnimationProperty *)end;
+
 -(void)setProgress:(CGFloat)progress isResume:(BOOL)isResumes;
 
 @end

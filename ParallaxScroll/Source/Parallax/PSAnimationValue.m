@@ -228,6 +228,20 @@ NS_INLINE CATransform3D CATransform3DProgress(CATransform3D fromValue, CATransfo
     return v;
 }
 
+- (PSAnimationValue *)initWithValue:(id)value {
+    if ([value isKindOfClass:[UIColor class]]) {
+        return [[PSAnimationValue alloc]initWithUIColor:value];
+    } else if ([value isKindOfClass:[NSNumber class]]) {
+        return [[PSAnimationValue alloc]initWithCGFloat:((NSNumber *)value).CGFloatValue];
+    } else if ([value isKindOfClass:[NSValue class]]) {
+        PSAnimationValue *v = [[PSAnimationValue alloc]init];
+        v.value = value;
+        return v;
+    } else {
+        return nil;
+    }
+}
+
 - (CGFloat) cgFloatValue { return ((NSNumber *)self.value).CGFloatValue; }
 - (CGPoint) cgPointValue { return self.value.CGPointValue; }
 - (CGRect) cgRectValue { return self.value.CGRectValue; }

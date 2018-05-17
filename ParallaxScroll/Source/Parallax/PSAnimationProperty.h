@@ -14,6 +14,7 @@
 @property(nonatomic, copy) NSString *animationPropertyKey;
 @property(nonatomic, strong) PSAnimationValue *propertyValue;
 
++ (PSAnimationProperty *)propertyWithKey:(NSString *)key value:(id)value; //kvc
 + (PSAnimationProperty *)propertyWithColor:(UIColor *)color;
 + (PSAnimationProperty *)propertyWithCornerRadius:(CGFloat)cornerRadius;
 + (PSAnimationProperty *)propertyWithTransform3D:(CATransform3D)transform3D;
