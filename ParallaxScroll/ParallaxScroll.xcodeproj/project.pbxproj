@@ -11,6 +11,8 @@
 		012566E720A960100050C351 /* PageCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566E620A960100050C351 /* PageCollectionViewFlowLayout.m */; };
 		012566ED20AAADA90050C351 /* PSAnimationValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566EC20AAADA90050C351 /* PSAnimationValue.m */; };
 		012566F020AC117B0050C351 /* PSAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566EF20AC117B0050C351 /* PSAnimationView.m */; };
+		012566F320AC1ABE0050C351 /* TransationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566F220AC1ABE0050C351 /* TransationCell.m */; };
+		012566F620AD47E00050C351 /* UIColor+parallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 012566F520AD47E00050C351 /* UIColor+parallax.m */; };
 		01E1A26A20A92A69007C266A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A26920A92A69007C266A /* AppDelegate.m */; };
 		01E1A26D20A92A69007C266A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E1A26C20A92A69007C266A /* ViewController.m */; };
 		01E1A27020A92A69007C266A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E1A26E20A92A69007C266A /* Main.storyboard */; };
@@ -31,6 +33,10 @@
 		012566EC20AAADA90050C351 /* PSAnimationValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationValue.m; sourceTree = "<group>"; };
 		012566EE20AC117B0050C351 /* PSAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSAnimationView.h; sourceTree = "<group>"; };
 		012566EF20AC117B0050C351 /* PSAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSAnimationView.m; sourceTree = "<group>"; };
+		012566F120AC1ABE0050C351 /* TransationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransationCell.h; sourceTree = "<group>"; };
+		012566F220AC1ABE0050C351 /* TransationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransationCell.m; sourceTree = "<group>"; };
+		012566F420AD47E00050C351 /* UIColor+parallax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+parallax.h"; sourceTree = "<group>"; };
+		012566F520AD47E00050C351 /* UIColor+parallax.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+parallax.m"; sourceTree = "<group>"; };
 		01E1A26520A92A69007C266A /* ParallaxScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E1A26820A92A69007C266A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01E1A26920A92A69007C266A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 				01E1A26920A92A69007C266A /* AppDelegate.m */,
 				01E1A26B20A92A69007C266A /* ViewController.h */,
 				01E1A26C20A92A69007C266A /* ViewController.m */,
+				012566F120AC1ABE0050C351 /* TransationCell.h */,
+				012566F220AC1ABE0050C351 /* TransationCell.m */,
 				01E1A26E20A92A69007C266A /* Main.storyboard */,
 				01E1A27120A92A6B007C266A /* Assets.xcassets */,
 				01E1A27320A92A6B007C266A /* LaunchScreen.storyboard */,
@@ -126,6 +134,8 @@
 				01E1A29820A936A9007C266A /* UIScrollView+parallax.m */,
 				012566E220A958330050C351 /* UIView+parallax.h */,
 				012566E320A958330050C351 /* UIView+parallax.m */,
+				012566F420AD47E00050C351 /* UIColor+parallax.h */,
+				012566F520AD47E00050C351 /* UIColor+parallax.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -206,8 +216,10 @@
 				01E1A28720A92BC1007C266A /* PSAnimator.m in Sources */,
 				01E1A29920A936A9007C266A /* UIScrollView+parallax.m in Sources */,
 				012566ED20AAADA90050C351 /* PSAnimationValue.m in Sources */,
+				012566F620AD47E00050C351 /* UIColor+parallax.m in Sources */,
 				01E1A27820A92A6B007C266A /* main.m in Sources */,
 				012566E420A958330050C351 /* UIView+parallax.m in Sources */,
+				012566F320AC1ABE0050C351 /* TransationCell.m in Sources */,
 				01E1A26A20A92A69007C266A /* AppDelegate.m in Sources */,
 				012566E720A960100050C351 /* PageCollectionViewFlowLayout.m in Sources */,
 			);
@@ -352,6 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJ6D8L57PH;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,6 +382,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JJ6D8L57PH;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

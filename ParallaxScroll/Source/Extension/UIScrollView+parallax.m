@@ -39,15 +39,17 @@ NS_INLINE CGFloat relativeProgressTransform(CGFloat progressValue, CGFloat relat
     dispatch_once(&onceToken, ^{
         ps_swizzleSelector([self class], @selector(setContentOffset:animated:), @selector(ps_setContentOffSet:animated:));
         ps_swizzleSelector([self class], @selector(setContentOffset:), @selector(ps_setContentOffSet:));
-        ps_swizzleSelector([self class], @selector(contentOffset), @selector(ps_setContentOffSet:));
+        ps_swizzleSelector([self class], @selector(contentOffset), @selector(ps_contentOffSet));
     });
 }
 
 -(void)ps_setContentOffSet:(CGPoint)offSet animated:(BOOL)animated {
+    [self updateView];
     [self ps_setContentOffSet:offSet animated:animated];
 }
 
 -(void)ps_setContentOffSet:(CGPoint)offSet {
+    [self updateView];
     [self ps_setContentOffSet:offSet];
 }
 
@@ -79,7 +81,7 @@ NS_INLINE CGFloat relativeProgressTransform(CGFloat progressValue, CGFloat relat
             }
             
             //转化到 父容器坐标系
-            CGPoint center = [self convertPoint:view.center toView:self];
+            CGPoint center = [self convertPoint:view.center toCoordinateSpace:[UIScreen mainScreen].coordinateSpace];
             switch (animator.direction) {
                 case PSScrollDirectionVertical:
                     [animator applyAnimationWithProgress:[self verticalProgressAtCenter:center toViewPortHeight:self.bounds.size.height]];

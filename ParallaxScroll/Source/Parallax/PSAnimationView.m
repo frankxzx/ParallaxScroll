@@ -11,11 +11,11 @@
 
 @implementation PSAnimationView
 
--(void)setProgress:(PSScrollProgessValue)progress {
+-(void)setProgress:(CGFloat)progress {
     
-    PSAnimationValue *formValue = self.fromAnimationProperty.propertyValue;
+    PSAnimationValue *fromValue = self.fromAnimationProperty.propertyValue;
     PSAnimationValue *toValue = self.toAnimationProperty.propertyValue;
-    PSAnimationValue *diffValue = [formValue progressToValue:toValue atProgress:progress.value];
+    PSAnimationValue *diffValue = [fromValue progressToValue:toValue atProgress:progress];
     if (diffValue) {
         NSString *keyPath = self.fromAnimationProperty.animationPropertyKey;
         UIView *view = self.view;

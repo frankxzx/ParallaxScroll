@@ -16,6 +16,6 @@
 @property(nonatomic, strong) PSAnimationProperty *fromAnimationProperty;
 @property(nonatomic, strong) PSAnimationProperty *toAnimationProperty;
 
--(void)setProgress:(PSScrollProgessValue)progress;
+-(void)setProgress:(CGFloat)progress;
 
 @end

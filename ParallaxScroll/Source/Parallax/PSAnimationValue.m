@@ -7,6 +7,7 @@
 //
 
 #import "PSAnimationValue.h"
+#import "UIColor+parallax.h"
 
 UIColor * UIColorProgress(UIColor * fromValue, UIColor * toValue, CGFloat progress) {
     const CGFloat *componentColors = CGColorGetComponents(fromValue.CGColor);
@@ -91,6 +92,8 @@ NS_INLINE CATransform3D CATransform3DProgress(CATransform3D fromValue, CATransfo
 
 -(BOOL)isCGAffineTransformType;
 
+-(BOOL)isCGFloatType;
+
 @end
 
 @implementation NSValue (UnBox)
@@ -113,6 +116,18 @@ NS_INLINE CATransform3D CATransform3DProgress(CATransform3D fromValue, CATransfo
 -(BOOL)isCGSizeType {
     NSString *valueType = [NSString stringWithUTF8String:self.objCType];
     return [valueType hasPrefix:@"{CGSize"];
+}
+
+-(BOOL)isCGFloatType {
+    NSString *valueType = [NSString stringWithUTF8String:self.objCType];
+    
+#if (CGFLOAT_IS_DOUBLE == 1)
+    return [valueType isEqualToString:@"d"];
+#else
+    return [valueType isEqualToString:@"f"];
+#endif
+    
+
 }
 
 -(BOOL)isCGAffineTransformType {
@@ -229,7 +244,7 @@ NS_INLINE CATransform3D CATransform3DProgress(CATransform3D fromValue, CATransfo
 -(PSAnimationValue *)progressToValue:(PSAnimationValue *)value atProgress:(CGFloat)progress {
     
     if (value.colorValue) {
-        UIColor *newColor = UIColorProgress(self.colorValue, value.colorValue, progress);
+        UIColor *newColor = [UIColor ps_colorFromColor:self.colorValue toColor:value.colorValue progress:progress];
         return [[PSAnimationValue alloc]initWithUIColor:newColor];
     }
     
@@ -257,6 +272,11 @@ NS_INLINE CATransform3D CATransform3DProgress(CATransform3D fromValue, CATransfo
     if (v.isCGSizeType) {
         CGSize newSize = CGSizeProgress(self.cgSizeValue, value.cgSizeValue, progress);
         return [[PSAnimationValue alloc]initWithCGSize:newSize];
+    }
+    
+    if (v.isCGFloatType) {
+        CGFloat newFloat = CGFloatProgress(self.cgFloatValue, value.cgFloatValue, progress);
+        return [[PSAnimationValue alloc]initWithCGFloat:newFloat];
     }
     
     return nil;

@@ -27,9 +27,30 @@
 }
 
 -(void)applyAnimationWithProgress:(PSScrollProgessValue)value {
+    NSLog(@"progressValue: %f", value.value);
+
+    CGFloat progress = 0.f;
+    PSScrollProgressState progressState = value.direction;
+    switch (progressState) {
+        case PSScrollProgressStateAbove:
+        case PSScrollProgressStateLeft:
+            progress = value.value;
+            break;
+            
+        case PSScrollProgressStateBelow:
+        case PSScrollProgressStateRight:
+            progress = value.value;
+            break;
+            
+        case PSScrollProgressStateCenter:
+            progress = 1.0;
+            break;
+    }
+
+
     //执行最小单位的动画组
     [self.animationViews enumerateObjectsUsingBlock:^(PSAnimationView * _Nonnull animationView, NSUInteger idx, BOOL * _Nonnull stop) {
-        [animationView setProgress:value];
+        [animationView setProgress:progress];
     }];
 }
 
