@@ -11,10 +11,17 @@
 
 @implementation PSAnimationView
 
++(PSAnimationView *)animvationViewWithBeginProperty:(PSAnimationProperty *)begin
+                                        endProperty:(PSAnimationProperty *)end
+                                             inView:(UIView *)view {
+    PSAnimationView *v = [[PSAnimationView alloc]init];
+    v.fromAnimationProperty = begin;
+    v.toAnimationProperty = end;
+    v.view = view;
+    return v;
+}
+
 -(void)setProgress:(CGFloat)progress isResume:(BOOL)isResume {
-    
-//        PSAnimationValue *fromValue = self.fromAnimationProperty.propertyValue;
-//        PSAnimationValue *toValue = self.toAnimationProperty.propertyValue;
     
     PSAnimationValue *fromValue = isResume? self.toAnimationProperty.propertyValue : self.fromAnimationProperty.propertyValue;
     PSAnimationValue *toValue = isResume? self.fromAnimationProperty.propertyValue : self.toAnimationProperty.propertyValue;

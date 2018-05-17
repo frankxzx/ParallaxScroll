@@ -10,4 +10,39 @@
 
 @implementation PSAnimationProperty
 
++ (PSAnimationProperty *)propertyWithColor:(UIColor *)color {
+    PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
+    f.animationPropertyKey = @"backgroundColor";
+    f.propertyValue = [[PSAnimationValue alloc]initWithUIColor:color];
+    return f;
+}
+
++ (PSAnimationProperty *)propertyWithCornerRadius:(CGFloat)cornerRadius {
+    PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
+    f.animationPropertyKey = @"cornerRadius";
+    f.propertyValue = [[PSAnimationValue alloc]initWithCGFloat:cornerRadius];
+    return f;
+}
+
++ (PSAnimationProperty *)propertyWithTransform3D:(CATransform3D)transform3D {
+    PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
+    f.animationPropertyKey = @"transform3D";
+    f.propertyValue = [[PSAnimationValue alloc]initWithCATransform3D:transform3D];
+    return f;
+}
+
++ (PSAnimationProperty *)propertyWithAffineTransform:(CGAffineTransform)affineTransform {
+    PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
+    f.animationPropertyKey = @"transform";
+    f.propertyValue = [[PSAnimationValue alloc]initWithCGAffineTransform:affineTransform];
+    return f;
+}
+
++ (PSAnimationProperty *)propertyWithAlph:(CGFloat)alpha {
+    PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
+    f.animationPropertyKey = @"alpha";
+    f.propertyValue = [[PSAnimationValue alloc]initWithCGFloat:alpha];
+    return f;
+}
+
 @end

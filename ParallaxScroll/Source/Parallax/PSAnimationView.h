@@ -16,6 +16,10 @@
 @property(nonatomic, strong) PSAnimationProperty *fromAnimationProperty;
 @property(nonatomic, strong) PSAnimationProperty *toAnimationProperty;
 
++(PSAnimationView *)animvationViewWithBeginProperty:(PSAnimationProperty *)begin
+                                        endProperty:(PSAnimationProperty *)end
+                                             inView:(UIView *)view;
+
 -(void)setProgress:(CGFloat)progress isResume:(BOOL)isResumes;
 
 @end

@@ -29,50 +29,28 @@
 }
 
 -(PSAnimator *)configureAnimator {
-    PSAnimator *a = [[PSAnimator alloc]init];
-    PSAnimationView *v = [[PSAnimationView alloc]init];
-    v.fromAnimationProperty = [self setupAnimationProperty1];
-    v.toAnimationProperty = [self setupAnimationProperty2];;
-    v.view = self.view1;
     
-    PSAnimationView *v2 = [[PSAnimationView alloc]init];
-    v2.fromAnimationProperty = [self setupAnimationProperty3];
-    v2.toAnimationProperty = [self setupAnimationProperty4];;
-    v2.view = self.view2;
+    PSAnimationProperty *p1 = [PSAnimationProperty propertyWithAlph:0];
+    PSAnimationProperty *p2 = [PSAnimationProperty propertyWithAlph:1];
     
-    a.animationViews = @[v, v2];
+    PSAnimationProperty *p3 = [PSAnimationProperty propertyWithColor:[UIColor purpleColor]];
+    PSAnimationProperty *p4 = [PSAnimationProperty propertyWithColor:[UIColor yellowColor]];
     
-    return a;
+    PSAnimationProperty *p5 = [PSAnimationProperty propertyWithCornerRadius:0];
+    PSAnimationProperty *p6 = [PSAnimationProperty propertyWithCornerRadius:50];
+    
+    return [PSAnimator animateWithDirection:PSScrollDirectionVertical
+                             animationViews:@[[PSAnimationView animvationViewWithBeginProperty:p1
+                                                                                   endProperty:p2
+                                                                                        inView:self.view1],
+                                              [PSAnimationView animvationViewWithBeginProperty:p3
+                                                                                   endProperty:p4
+                                                                                        inView:self.view1],
+                                              [PSAnimationView animvationViewWithBeginProperty:p5
+                                                                                   endProperty:p6
+                                                                                        inView:self.view2],
+                                                                                       ]];
 }
-
--(PSAnimationProperty *)setupAnimationProperty1 {
-    PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
-    f.animationPropertyKey = @"backgroundColor";
-    f.propertyValue = [[PSAnimationValue alloc]initWithUIColor:[UIColor yellowColor]];
-    return f;
-}
-
--(PSAnimationProperty *)setupAnimationProperty2 {
-    PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
-    f.animationPropertyKey = @"backgroundColor";
-    f.propertyValue = [[PSAnimationValue alloc]initWithUIColor:[UIColor whiteColor]];
-    return f;
-}
-
--(PSAnimationProperty *)setupAnimationProperty3 {
-    PSAnimationProperty *t = [[PSAnimationProperty alloc]init];
-    t.animationPropertyKey = @"cornerRadius";
-    t.propertyValue = [[PSAnimationValue alloc]initWithCGFloat:0];
-    return t;
-}
-
--(PSAnimationProperty *)setupAnimationProperty4 {
-    PSAnimationProperty *f = [[PSAnimationProperty alloc]init];
-    f.animationPropertyKey = @"cornerRadius";
-    f.propertyValue = [[PSAnimationValue alloc]initWithCGFloat:50];
-    return f;
-}
-
 
 -(UIView *)view1 {
     if (!_view1) {

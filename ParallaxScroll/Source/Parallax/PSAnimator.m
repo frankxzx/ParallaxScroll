@@ -11,17 +11,22 @@
 
 @interface PSAnimator()
 
+@property(nonatomic, strong) NSArray <PSAnimationView *>* animationViews;
+
 @end
 
 @implementation PSAnimator
 
-+(instancetype)animateWithDirection:(PSScrollDirection)direction {
-    return [[self.class alloc]initWithDirection:direction];
++(instancetype)animateWithDirection:(PSScrollDirection)direction
+                     animationViews:(NSArray <PSAnimationView *>*)animationViews {
+    return [[self.class alloc]initWithDirection:direction animationViews:animationViews];
 }
 
--(instancetype)initWithDirection:(PSScrollDirection)direction {
+-(instancetype)initWithDirection:(PSScrollDirection)direction
+                    animationViews:(NSArray <PSAnimationView *>*)animationViews {
     if (self = [super init]) {
         self.direction = direction;
+        self.animationViews = animationViews;
     }
     return self;
 }

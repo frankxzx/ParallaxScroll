@@ -51,9 +51,10 @@ typedef NS_ENUM(NSUInteger, PSScrollDirection) {
 
 @property(nonatomic, assign) PSScrollDirection direction;
 
-@property(nonatomic, strong) NSArray <PSAnimationView *>* animationViews;
+@property(nonatomic, strong, readonly) NSArray <PSAnimationView *>* animationViews;
 
-+(instancetype)animateWithDirection:(PSScrollDirection)direction;
++(instancetype)animateWithDirection:(PSScrollDirection)direction
+                     animationViews:(NSArray <PSAnimationView *>*)animationViews;
 
 -(void)applyAnimationWithProgress:(PSScrollProgessValue)value;
 

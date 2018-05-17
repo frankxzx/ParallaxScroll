@@ -14,4 +14,10 @@
 @property(nonatomic, copy) NSString *animationPropertyKey;
 @property(nonatomic, strong) PSAnimationValue *propertyValue;
 
++ (PSAnimationProperty *)propertyWithColor:(UIColor *)color;
++ (PSAnimationProperty *)propertyWithCornerRadius:(CGFloat)cornerRadius;
++ (PSAnimationProperty *)propertyWithTransform3D:(CATransform3D)transform3D;
++ (PSAnimationProperty *)propertyWithAffineTransform:(CGAffineTransform)affineTransform;
++ (PSAnimationProperty *)propertyWithAlph:(CGFloat)alpha;
+
 @end
