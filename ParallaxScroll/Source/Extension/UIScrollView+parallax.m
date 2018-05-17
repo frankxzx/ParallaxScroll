@@ -25,10 +25,10 @@ static inline void ps_swizzleSelector(Class _class, SEL _originSelector, SEL _ne
 }
 
 NS_INLINE CGFloat relativeProgressTransform(CGFloat progressValue, CGFloat relativeValue) {
-    CGFloat relativePercent = (progressValue - (relativeValue / 2.0)) / relativeValue;
-    if (relativePercent == 0.0) { return  0.0; }
-    if (relativePercent <= -1.0) { return -1.0; }
-    if (relativePercent >=  1.0) { return  1.0; }
+    CGFloat relativePercent = (progressValue - (relativeValue / 2.0)) / (relativeValue / 2);
+    if (relativePercent <= -1.0) { return -1.0; } // -1...0 上部分
+    if (relativePercent >=  1.0) { return  1.0; } // 0...1 下部分
+//    NSLog(@"center.y %f, height: %f, percent: %f",progressValue, relativeValue, relativePercent);
     return relativePercent;
 }
 
@@ -96,26 +96,26 @@ NS_INLINE CGFloat relativeProgressTransform(CGFloat progressValue, CGFloat relat
 
 -(PSScrollProgessValue)verticalProgressAtCenter:(CGPoint)center toViewPortHeight:(CGFloat)height {
     CGFloat relativePercent = relativeProgressTransform(center.y, height);
-    if (relativePercent < -kCenterThreshHold)
+    if (relativePercent < 0)
     {
-        return PSScrollProgessMake(PSScrollProgressStateAbove, 1.0 + relativePercent);
+        return PSScrollProgessMake(PSScrollProgressStateAbove, relativePercent);
     }
-    else if (relativePercent > kCenterThreshHold)
+    else if (relativePercent > 0)
     {
-        return PSScrollProgessMake(PSScrollProgressStateBelow, 1.0 - relativePercent);
+        return PSScrollProgessMake(PSScrollProgressStateBelow, relativePercent);
     }
     return PSScrollProgessMake(PSScrollProgressStateCenter, 0);
 }
 
 -(PSScrollProgessValue)horizontalProgressAtCenter:(CGPoint)center toViewPortWidth:(CGFloat)Width {
     CGFloat relativePercent = relativeProgressTransform(center.x, Width);
-    if (relativePercent < -kCenterThreshHold)
+    if (relativePercent < 0)
     {
-        return PSScrollProgessMake(PSScrollProgressStateLeft, 1.0 + relativePercent);
+        return PSScrollProgessMake(PSScrollProgressStateLeft, relativePercent);
     }
-    else if (relativePercent > kCenterThreshHold)
+    else if (relativePercent > 0)
     {
-        return PSScrollProgessMake(PSScrollProgressStateRight, 1.0 - relativePercent);
+        return PSScrollProgessMake(PSScrollProgressStateRight, relativePercent);
     }
     return PSScrollProgessMake(PSScrollProgressStateCenter, 0);
 }

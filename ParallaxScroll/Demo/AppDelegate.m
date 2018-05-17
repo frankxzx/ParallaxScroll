@@ -16,10 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-//    NSValue *v = [NSValue valueWithCGPoint:CGPointMake(10, 10)];
-    NSValue *v = [NSNumber numberWithFloat:10];
-    printf("=== value %s ===", v.objCType);
     return YES;
 }
 

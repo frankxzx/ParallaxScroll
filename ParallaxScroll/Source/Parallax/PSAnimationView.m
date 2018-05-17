@@ -11,10 +11,14 @@
 
 @implementation PSAnimationView
 
--(void)setProgress:(CGFloat)progress {
+-(void)setProgress:(CGFloat)progress isResume:(BOOL)isResume {
     
-    PSAnimationValue *fromValue = self.fromAnimationProperty.propertyValue;
-    PSAnimationValue *toValue = self.toAnimationProperty.propertyValue;
+//        PSAnimationValue *fromValue = self.fromAnimationProperty.propertyValue;
+//        PSAnimationValue *toValue = self.toAnimationProperty.propertyValue;
+    
+    PSAnimationValue *fromValue = isResume? self.toAnimationProperty.propertyValue : self.fromAnimationProperty.propertyValue;
+    PSAnimationValue *toValue = isResume? self.fromAnimationProperty.propertyValue : self.toAnimationProperty.propertyValue;
+
     PSAnimationValue *diffValue = [fromValue progressToValue:toValue atProgress:progress];
     if (diffValue) {
         NSString *keyPath = self.fromAnimationProperty.animationPropertyKey;

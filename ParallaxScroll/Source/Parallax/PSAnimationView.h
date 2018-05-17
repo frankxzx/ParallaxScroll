@@ -16,6 +16,6 @@
 @property(nonatomic, strong) PSAnimationProperty *fromAnimationProperty;
 @property(nonatomic, strong) PSAnimationProperty *toAnimationProperty;
 
--(void)setProgress:(CGFloat)progress;
+-(void)setProgress:(CGFloat)progress isResume:(BOOL)isResumes;
 
 @end

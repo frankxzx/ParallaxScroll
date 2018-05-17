@@ -29,6 +29,7 @@
     self.collectionView.delegate = self;
     self.collectionView.decelerationRate = UIScrollViewDecelerationRateNormal;
     [self.collectionView registerClass:[TransationCell class] forCellWithReuseIdentifier:@"TransationCell"];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
     [self.view addSubview:self.collectionView];
 }
 
@@ -40,8 +41,15 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TransationCell" forIndexPath:indexPath];
-    return cell;
+    return [collectionView dequeueReusableCellWithReuseIdentifier:@"TransationCell" forIndexPath:indexPath];
+    if (indexPath.row == 1) {
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TransationCell" forIndexPath:indexPath];
+        return cell;
+    } else {
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+        return cell;
+    }
+
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

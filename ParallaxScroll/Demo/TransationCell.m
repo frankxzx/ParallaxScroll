@@ -76,7 +76,9 @@
 
 -(UIView *)view1 {
     if (!_view1) {
-        _view1 = [[UIView alloc]initWithFrame:CGRectMake(30, 30, 100, 100)];
+        CGFloat w = self.frame.size.width;
+        CGFloat h = self.frame.size.height;
+        _view1 = [[UIView alloc]initWithFrame:CGRectMake((w-100)/2, (h-100)/2, 100, 100)];
         _view1.backgroundColor = [UIColor yellowColor];
     }
     return _view1;
